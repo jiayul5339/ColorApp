@@ -1,10 +1,17 @@
 import React from 'react'
 
-const ColorSearch = () => {
+const ColorSearch = ({setColor}) => {
   return (
-    <form >
-        <input className='searchBlock' type='text'/>
-    </form>
+    <div>
+        <input 
+            className='searchBlock' 
+            type='text'
+            onChange={(e) => {
+                setColor(e.target.value)
+            }}
+            placeholder='Add Color Name'
+        />
+    </div>
   )
 }
 

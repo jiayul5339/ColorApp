@@ -1,9 +1,10 @@
 import React from 'react'
 
-const ColorBlock = () => {
+const ColorBlock = ({ color }) => {
+
   return (
-    <div className='colorBlock'>
-        <p>Empty Value</p>
+    <div id='colorBlock' style={{backgroundColor:color}}>
+        <p>{color ? color : "Empty Value"}</p>
     </div>
   )
 }
